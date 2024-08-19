@@ -1,2 +1,2 @@
 # spring-todo-list
-To-Do-List application
+To-Do-List application using springboot framework 
