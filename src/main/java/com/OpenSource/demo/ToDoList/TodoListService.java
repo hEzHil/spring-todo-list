@@ -1,36 +1,38 @@
 package com.OpenSource.demo.ToDoList;
 
-import com.sun.jdi.request.DuplicateRequestException;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @Service
-public class TodoListService {
+public class TodoListService  {
 
-    private final DaoLayer daoLayer;
+    private final ToDoDao toDoDao;
 
-    public TodoListService(DaoLayer daoLayer) {
-        this.daoLayer = daoLayer;
+
+
+    public TodoListService(ToDoDao toDoDao) {
+        this.toDoDao = toDoDao;
+
     }
 
-    public List<ToDoList> getAllCustomer(){
-        return daoLayer.selectAllToDoList();
+    public List<ToDoList> getAllTask() {
+        return toDoDao.selectAllTaskList();
     }
 
-    public void insertTask(ToDoRegistration toDoRegistration){
-        String task = toDoRegistration.toDo();
-        if(daoLayer.existsWithSameTask(task)){
-            throw new DuplicateRequestException("The task is already here.");
-        }
-        // Ensure the date format is valid before proceeding
+    public Optional<ToDoList> getTaskById(Long id) {
+        return toDoDao.selectTaskById(id);
+    }
 
-        ToDoList newTask = new ToDoList(task, toDoRegistration.date());
-        if (newTask.getDate() != null) {
-            daoLayer.insertTask(newTask);
-        } else {
-            throw new IllegalArgumentException("Invalid date format provided.");
+    public ToDoList saveToDo(ToDoList toDoList) {
+        if (toDoList.getTitle() == null || toDoList.getTitle().trim().isEmpty()) {
+            throw new IllegalArgumentException("Title cannot be null or empty.");
         }
+        return toDoDao.saveTodo(toDoList);
+    }
+
+    public void deleteById(Long id) {
+        toDoDao.deleteById(id);
     }
 }
