@@ -1,4 +1,4 @@
-                                    𝐓𝐎-𝐃𝐎-𝐋𝐈𝐒𝐓 	   
+                                               𝐓𝐎-𝐃𝐎-𝐋𝐈𝐒𝐓 	   
 
 To-Do List Application built using the Spring Boot framework on the backend and a likely frontend framework (like React or similar) to provide a user interface. This project involves a basic CRUD (Create, Read, Update, Delete) application where users can manage their to-do tasks.
 
