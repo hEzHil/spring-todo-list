@@ -10,7 +10,9 @@ To-Do List Application built using the Spring Boot framework on the backend and 
 
 𝑹𝑬𝑺𝑻𝒇𝒖𝒍 𝑨𝑷𝑰:
 ->  The backend exposes a RESTful API with endpoints to create, read, update, and delete to-do items. These endpoints are accessed via HTTP methods like GET, POST, PUT, and DELETE.
-Data Persistence: The project uses a relational database (like MySQL) to store to-do items. The data is managed through JPA (Java Persistence API), specifically using Spring Data JPA's JpaRepository.
+
+𝑫𝒂𝒕𝒂 𝑷𝒆𝒓𝒔𝒊𝒔𝒕𝒆𝒏𝒄𝒆:
+-> The project uses a relational database (like MySQL) to store to-do items. The data is managed through JPA (Java Persistence API), specifically using Spring Data JPA's JpaRepository.
 
  𝑬𝒏𝒕𝒊𝒕𝒚: 
  -> The ToDoList entity represents the data model for a to-do item, consisting of an id (primary key) and a title field that describes the task.
