@@ -1,6 +1,5 @@
 package com.OpenSource.demo.ToDoList;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -10,11 +9,11 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("api/v1/todo")
-public class Controller {
+public class ToDOController {
 
     private final TodoListService toDoService;
 
-    public Controller(TodoListService toDoService) {
+    public ToDOController(TodoListService toDoService) {
         this.toDoService = toDoService;
     }
 
