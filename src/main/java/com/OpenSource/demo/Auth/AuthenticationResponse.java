@@ -1,4 +1,4 @@
-package com.OpenSource.demo.User;
+package com.OpenSource.demo.Auth;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
